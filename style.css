@@ -1,0 +1,37 @@
+body,table{
+    margin: 0 auto;
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+}
+
+:root{
+    --primary-bg-color: #EFCF83;
+    --seconday-bg-color:#ae9864 ;
+    --third-bg-color: #624B1C;
+    --forth-bg-color: #AA5725;
+}
+
+body{
+    background-color: var(--primary-bg-color);
+}
+
+table{
+    color: var(--forth-bg-color);
+    font-size: 32px;
+    font-weight: 700;
+}
+
+button{
+
+}
+
+button:hover,.activeBtn{
+    background-color: var(--seconday-bg-color);
+}
+
+.activeBox{
+    display: block;
+    
+}
+

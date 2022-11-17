@@ -97,3 +97,52 @@ const decryptText = (string) => {
 btnDecr.addEventListener('click', () =>{
     resultDecr.innerText = decryptText(txtDecrypt.value);
 })
+
+//Top buttons
+let btns = document.getElementsByTagName("button")
+let encryContainer = document.getElementById("encryptor-container")
+let decryContainer = document.getElementById("decryptor-container")
+let boxes = document.getElementsByClassName("box")
+
+window.addEventListener('load', (event) => {
+    console.log('page is fully loaded');
+    encryContainer.classList.add("activeBox");
+    btns[0].click()
+    btns[0].focus()
+    //decryContainer.classList.add("activeBox")
+    
+  });
+
+
+
+for (var i = 0; i < btns.length; i++) {
+    console.log(i)
+    btns[i].addEventListener("click", function() {
+    var currentBtn = document.getElementsByClassName("activeBtn");
+    let currentContainer = document.getElementsByClassName("activeBox")
+    if (currentBtn.length > 0) { 
+        currentBtn[0].className = currentBtn[0].className.replace("activeBtn", "");
+        //currentContainer[0].className = currentContainer[0].className.replace("activeBox","");
+    }
+    this.className += "activeBtn";
+    if(this.id == "encryBtn"){
+        encryContainer.style.display = "block"
+        decryContainer.style.display = "none"
+    }else{
+        encryContainer.style.display = "none"
+        decryContainer.style.display = "block"
+    }
+    console.log(this)
+
+   
+    /*if(i == 0){
+        encryContainer.style.display = "none";
+        decryContainer.style.display = "block";
+    }else{
+        decryContainer.style.display = "none";
+        encryContainer.style.display = "block";
+    }*/
+
+    });
+  }
+

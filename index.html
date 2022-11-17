@@ -4,29 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
-    <h1>encryption</h1>
+    <h1>Encryption and Decryption</h1>
 
-    <form action="">
-        <label for="txtEncrypt">Enter the sentence to be encrypted: </label>
-        <input type="text" name="txtEncrypt" id="txtEncrypt"><br>
-        <input type="button" value="Encrypt" id="btnEncr">
-    </form>
+    <div id="buttons">
+        <button id="encryBtn">Encryptor</button>
+        <button id="decryBtn">Decryptor</button>
+    </div>
 
-    <table id="resultTable"></table>
+    <div class="box" id="encryptor-container">
+        <form action="">
+            <label for="txtEncrypt">Enter the sentence to be encrypted: </label>
+            <input type="text" name="txtEncrypt" id="txtEncrypt"><br>
+            <input type="button" value="Encrypt" id="btnEncr">
+        </form>
+        <p>Resultado:</p>
+        <table id="resultTable"></table>
+        
+        <p id="resultEncr">&#77824</p>
 
-    <p id="resultEncr">&#77824</p>
+    </div>
 
-    <form action="">
-        <label for="txtDecrypt">Enter the sentence to be decrypted: </label>
-        <input type="text" name="txtDecrypt" id="txtDecrypt"><br>
-        <input type="button" value="Decrypt" id="btnDecr">
-    </form>
+    
 
-    <p id="resultDecr">&#77824</p>
+    <div class="box" id="decryptor-container">
+        <form action="">
+            <label for="txtDecrypt">Enter the sentence to be decrypted: </label>
+            <input type="text" name="txtDecrypt" id="txtDecrypt"><br>
+            <input type="button" value="Decrypt" id="btnDecr">
+        </form>
 
-    <script src="script.js" charset="utf-8"></script>
+        <p>Resultado:</p><p id="resultDecr">...</p>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
